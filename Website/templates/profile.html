@@ -1,0 +1,20 @@
+{% extends 'flash.html' %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="900;" />
+    <title>Profile</title>
+</head>
+<body>
+{% block body %}
+<label>File Input:</label>
+<form action="/profile/{{ username }}" method=POST enctype=multipart/form-data>
+      <p><input type=file name=file>
+         <input type=submit value=Upload>
+</form>
+<div></div>
+    <form action="/logout/{{ username }}" method=POST>
+         <input type=submit value=Logout></form>
+{% endblock %}
+</body>
+</html>
