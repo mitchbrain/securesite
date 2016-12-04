@@ -12,9 +12,18 @@
       <p><input type=file name=file>
          <input type=submit value=Upload>
 </form>
+    {% if file_list %}
+        <label>Analysis For:</label><div></div>
+    {% for file in file_list %}
+        <label>{{ file }}</label>
+        <form action="/profile/{{ username }}/{{ file }}">
+         <input type=submit value=Download></form>
+    {% endfor %}
+    {% endif %}
 <div></div>
     <form action="/logout/{{ username }}" method=POST>
          <input type=submit value=Logout></form>
+
 {% endblock %}
 </body>
 </html>

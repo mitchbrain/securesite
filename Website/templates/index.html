@@ -1,8 +1,10 @@
+{% extends 'flash.html' %}
 {% from "_formhelpers.html" import render_field %}
 <html>
 <head>
 <title>Login</title>
 </head>
+{% block body %}
 <body>
 	<form method="POST" action="/">
 	   <dl>
@@ -14,4 +16,5 @@
 	    </dl>
 	</form>
 </body>
+{% endblock %}
 </html>

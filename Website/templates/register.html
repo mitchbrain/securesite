@@ -1,4 +1,6 @@
+{% extends 'flash.html' %}
 {% from "_formhelpers.html" import render_field %}
+{% block body %}
 <form method=post action="/register">
   <dl>
       {{ form.csrf_token }}
@@ -8,3 +10,4 @@
   </dl>
   <p><input type=submit value=Register>
 </form>
+{% endblock %}
